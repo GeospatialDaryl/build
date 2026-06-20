@@ -1,0 +1,18 @@
+# Rockchip RK3562 quad core 4GB SoC eMMC DOOGEE U10 tablet
+# DTS source: rk3562-rk817-tablet-v10.dts from rockchip-linux/kernel develop-6.1
+# Requires: CONFIG_CPU_RK3562=y CONFIG_CLK_RK3562=y in vendor kernel config
+# Reference build system: https://github.com/tech4bot/rk3562deb
+declare -g BOARD_NAME="DOOGEE U10"
+declare -g BOARDFAMILY="rk35xx"
+declare -g BOARD_MAINTAINER=""
+declare -g BOOTCONFIG="none"
+declare -g KERNEL_TARGET="vendor"
+declare -g FULL_DESKTOP="yes"
+declare -g BOOT_LOGO="desktop"
+declare -g BOOT_FDT_FILE="rockchip/rk3562-rk817-tablet-v10.dtb"
+declare -g SRC_EXTLINUX="yes"
+declare -g SRC_CMDLINE="earlycon=uart8250,mmio32,0xff210000 console=ttyS0,1500000n8 video=DSI-1:800x1280@60,rotate=90"
+declare -g IMAGE_PARTITION_TABLE="gpt"
+declare -g BOOTFS_TYPE="fat"
+declare -g SERIALCON="ttyS0:1500000"
+declare -g HAS_VIDEO_OUTPUT="yes"
