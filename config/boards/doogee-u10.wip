@@ -16,3 +16,6 @@ declare -g IMAGE_PARTITION_TABLE="gpt"
 declare -g BOOTFS_TYPE="fat"
 declare -g SERIALCON="ttyS0:1500000"
 declare -g HAS_VIDEO_OUTPUT="yes"
+# BOOTCONFIG=none builds no U-Boot; embed the SD-boot chain (idblock @64,
+# u-boot.itb @16384) into the final image so it boots via BootROM->SD.
+enable_extension "doogee-u10-sdboot"
